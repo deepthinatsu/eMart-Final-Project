@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-2 col-sm-1"></div>
+        <div class="col-lg-6 col-md-7 col-sm-4 mt-4 p-5 mb-5 shadow bg-white rounded">
+          <div class="text-center">
+    <h3>Sign Up As Buyer</h3>
+  </div>
+  <div>
+    <form [formGroup]="Buyer_register" >
+      <div class="form-group">
+        <div class="form-group">
+            <label for="username" class="h6"><i class="fa fa-user-circle-o" aria-hidden="true"></i>User Name : </label>
+            <input type="text" class="form-control" formControlName="buyer_username"
+              placeholder="User Name">
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="h6"><i class="fa fa-key" aria-hidden="true"></i>Password: </label>
+            <input type="password" class="form-control" formControlName="buyer_password"
+              placeholder="Password">
+          </div>
+
+          <div class="form-group">
+            <label for="Email"><h6><i class="fa fa-envelope" aria-hidden="true"></i>Email : </h6></label>
+            <input type="email"  class="form-control" formControlName="buyer_email" placeholder="mail">
+          </div>
+
+          <div class="form-group">
+            <label for="Phone" class="h6"><i class="fa fa-phone" aria-hidden="true"></i>Phone Number : </label>
+            <input type="number"  class="form-control" formControlName="buyer_mobile"
+              placeholder="Phone Number" minlength="10" maxlength="10">
+          </div>
+
+        <button type="submit" class="btn btn-primary" 
+          [disabled]="!Buyer_register.valid" (click)="onSubmit()">Submit</button>
+      </div>
+    </form>
+  </div>  
+  </div>
+  </div>
+  </div>

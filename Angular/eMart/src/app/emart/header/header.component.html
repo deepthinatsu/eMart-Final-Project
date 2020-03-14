@@ -1,0 +1,59 @@
+<div class="bg">
+<nav class="navbar navbar-expand-md navbar-dark ">
+    
+    <h2 class ="text-white"> 
+        <img src="https://image.flaticon.com/icons/svg/679/679847.svg" class="responsive">eMart</h2>
+    <button 
+        type="button" 
+        class="navbar-toggler" 
+        data-toggle="collapse" 
+        data-target="#collapse-nav-bar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapse-nav-bar">	
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a 
+                    class="nav-link  text-white" 
+                    routerLink="/"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+            </li>
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a
+                        class="nav-link text-white"
+                        [routerLink]="['/register']"><i class="fa fa-registered" aria-hidden="true"></i>Buyer Signup</a>
+            </li>
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a
+                        class="nav-link text-white"
+                        [routerLink]="['/seller-signup']"><i class="fa fa-registered" aria-hidden="true"></i>Seller Signup</a>
+            </li>
+            <li class="nav-item" *ngIf="!getLoggedIn()">
+                <a
+                        class="nav-link text-white"
+                        [routerLink]="['/aboutus']"><i class="fa fa-address-card" aria-hidden="true"></i>AboutUs</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a 
+                    class="nav-link  text-white" 
+                    routerLink="item-list"><i class="fa fa-list" aria-hidden="true"></i>Item List</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="cart-list"><i class="fa fa-cart-plus" aria-hidden="true"></i>Cart</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+              <a 
+                  class="nav-link text-white" 
+                  routerLink="bill-list"><i class="fa fa-history" aria-hidden="true"></i>Purchase History</a>
+            </li>
+            <li class="nav-item" *ngIf="getLoggedIn()">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+</div>
